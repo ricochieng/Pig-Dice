@@ -1,0 +1,26 @@
+
+/*This section is used to style the dice divs */
+div .dice {
+  height:100px;
+  width:100px;
+  border: 2px solid black;
+  background-color: gray;
+  text-align: center; color: white;
+  }
+
+/*This section is used to float the player1 div to the left*/
+#player1 {
+  float:left;
+  margin-top: 100px;
+}
+
+/*This section is used to float the player2 div to the right*/
+#player2 {
+  margin-top: 100px;
+
+}
+
+.button {
+  margin-top: 10px;
+
+}
