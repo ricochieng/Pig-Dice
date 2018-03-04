@@ -3,7 +3,7 @@
     <head>
       <link href="css/styles.css" rel="stylesheet" type="text/css">
       <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
+      <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
       <title>Pig Dice Game</title>
     </head>
     <body>
@@ -11,13 +11,11 @@
         <div id = "header">
           <h1>Pig Dice Game</h1>
           <h2>Rules</h2>
-          Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
-          <ol>
-            <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
-            <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
-            <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
-            <li>The first player to score 100 or more points wins.</li>
-          </ol>
+          <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</p>
+            <p>If the player rolls a 1, they score nothing and it becomes the next player's turn.</p>
+            <p>If the player rolls any other number, it is added to their turn total and the player's turn continues.</p>
+            <p>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</p>
+            <p>The first player to score 100 or more points wins.</p>
         </div>
 
         <div id = "player1">
@@ -26,7 +24,6 @@
           <button id ="hold1" click="hold1" class = "button">Hold</button>
           <h2 id = "player1Score">Score</h2>
           <h2 id = "player1Current">Current Score</h2>
-
         </div>
 
         <div id = "player2">
@@ -35,13 +32,12 @@
           <button id ="hold2" click="Hold2" class = "button">Hold</button>
           <h2 id = "player2Score">Score</h2>
           <h2 id = "player2Current">Current Score</h2>
-
-            <div id = "buttons">
-              <button id="start" class="btn-info btn-lg">START</button>
-              <button id="new-game" class="btn-info btn-lg">NEW GAME</button>
-            </div>
-          </h2>
         </div>
+        <div id = "buttons">
+          <button id="start" class="btn-info btn-lg">START</button>
+          <button id="new-game" class="btn-info btn-lg">NEW GAME</button>
+        </div>
+      </div>
 
       <script src="js/jquery-3.3.1.js"></script>
       <script src="js/app.js"></script>
