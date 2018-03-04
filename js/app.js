@@ -46,13 +46,6 @@ $(document).ready(function() {
   player2 = new Player(false);
   alert("Player 1 starts!");
 });
-
-  $("#new-game").click(function(event) {
-    player1.newGame();
-    player2.newGame();
-    alert("Player 1 starts!");
-    });
-
   $("#new-game").click(function(event) {
     player1.newGame();
     player2.newGame();
