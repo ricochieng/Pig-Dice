@@ -30,7 +30,7 @@ Player.prototype.winnerCheck = function() {
   if (this.totalscore >= 100) {
     alert("You are the winner!");
   }
-};
+}; 
 //Starts a New Game
 Player.prototype.newGame = function() {
   this.roll = 0;
@@ -52,49 +52,41 @@ $(document).ready(function() {
   });
 
   $("button1").click(function(event) {
-    $("#button2").hide();
-
     player1.roll = throwdice();
     $("#player2Score").empty();
     $("#player1Score").text(player1.roll);
     player1.rollone();
     if (player1.roll === 2) {
-        alert("You rolled 2!");
+        alert("You rolled 2!").show();
     } else if (player1.roll === 3) {
-      alert("You rolled 3!");
+      alert("You rolled 3!").show();
     } else if (player1.roll === 4) {
-      alert("You rolled 4!");
+      alert("You rolled 4!").show();
     } else if (player1.roll === 5) {
-      alert("You rolled 5!");
+      alert("You rolled 5!").show();
     } else if (player1.roll === 6) {
-      alert("You rolled 6!");
+      alert("You rolled 6!").show();
     } else if (player1.roll === 1) {
-      alert("You rolled 1, You're turn is over!");
     }
     $("#player1Current").text(player1.score);
-    $("#player1").css("background-color", "#83db20");
-    $("#player2").css("background-color", "grey");
   });
 
   $("button2").click(function(event) {
-    $("#button1").hide();
-
     player2.roll = throwdice();
     $("#player1Score").empty();
-    $("#player2Streak").text(player2.roll);
+    $("#player2Current").text(player2.roll);
     player2.rollone();
     if (player2.roll === 2) {
-      alert("You rolled 2!");
+      $(alert("You rolled 2!"));
     } else if (player2.roll === 3) {
-      alert("You rolled 3!");
+      $(alert("You rolled 3!"));
     } else if (player2.roll === 4) {
-      alert("You rolled 4!");
+      $(alert("You rolled 4!"));
     } else if (player2.roll === 5) {
-      alert("You rolled 5!");
+      $(alert("You rolled 5!"));
     } else if (player2.roll === 6) {
-      alert("You rolled 6!");
+      $(alert("You rolled 6!"));
     } else if (player2.roll === 1) {
-      alert("You rolled 1, You're turn is over!");
     }
     $("#player2Current").text(player2.score);
     $("#player2").css("background-color", "#83db20");
