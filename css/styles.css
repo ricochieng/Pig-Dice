@@ -1,3 +1,9 @@
+/*This section styles the header div*/
+#header {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
 /*This section is used to style the dice divs */
 div .dice {
@@ -26,8 +32,9 @@ div .dice {
 .button {
   margin-top: 10px;
 }
-#header h1 {
-  margin-left: 300px;
-  margin-right: auto;
 
+
+#buttons {
+  margin-left:
+  margin-right:500px;
 }
