@@ -12,15 +12,22 @@ div .dice {
 #player1 {
   float:left;
   margin-top: 100px;
+  margin-left: 200px;
 }
 
 /*This section is used to float the player2 div to the right*/
 #player2 {
   margin-top: 100px;
+  float:right;
+  margin-right: 200px;
 
 }
 
 .button {
   margin-top: 10px;
+}
+#header h1 {
+  margin-left: 300px;
+  margin-right: auto;
 
 }

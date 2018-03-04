@@ -1,0 +1,121 @@
+//Business Logic
+
+var result1 = function rolldice1(){
+  return Math.floor(6 * Math.random()) + 1;
+}
+
+//This function initiates Player ones turn
+function Player (turn) {
+  this.throw = 0;
+  this.score = 0;
+  this.totalscore = 0;
+  this.turn = turn;
+}
+//This function zeroes a players score if he roles one
+Player.prototype.rollone= function() {
+  if (this.throw === 1) {
+    this.score = 0;
+    alert("Sorry, you rolled a 1! Your turn is over!");
+  } else {
+    this.totalscore += this.throw;
+  }
+};
+
+Player.prototype.hold = function(){
+  this.totalscore += this.score;
+  this.score = 0;
+  alert("Pass the mouse!" || "Pass!");
+};
+//UI Logic
+$(document).ready(function() {
+  $("button1").click(function(event) {
+    $("#button2").hide();
+
+    button1.throw = result1();
+    button1.rollone();
+    if (button1.throw === 2) {
+        alert("You scored 2");
+    } else if (button.throw === 3) {
+      alert("You scored 3");
+
+    } else if (button1.throw === 4) {
+      alert("You scored 4");
+
+    } else if (button1.throw === 5) {
+      alert("You scored 5");
+
+    } else if (button1.throw === 6) {
+      alert("You scored 6");
+
+    } else if (button1.throw === 1) {
+      $("#p1_1").show();
+      $("#p1_2").hide();
+      $("#p1_3").hide();
+      $("#p1_4").hide();
+      $("#p1_5").hide();
+      $("#p1_6").hide();
+    }
+    $("#button1Current").text(player1.score);
+    $("#button1").css("background-color", "#83db20");
+    $("#button2").css("background-color", "grey");
+  });
+
+  $("#button2").click(function(event) {
+    $("#p1_1").hide();
+    $("#p1_2").hide();
+    $("#p1_3").hide();
+    $("#p1_4").hide();
+    $("#p1_5").hide();
+    $("#p1_6").hide();
+    player2.roll = result1();
+    $("#player1Streak").empty();
+    $("#player2Streak").text(player2.throw);
+    player2.rollone();
+    if (player2.throw === 2) {
+      $("#p2_1").hide();
+      $("#p2_2").show();
+      $("#p2_3").hide();
+      $("#p2_4").hide();
+      $("#p2_5").hide();
+      $("#p2_6").hide();
+    } else if (player2.throw === 3) {
+      $("#p2_1").hide();
+      $("#p2_2").hide();
+      $("#p2_3").show();
+      $("#p2_4").hide();
+      $("#p2_5").hide();
+      $("#p2_6").hide();
+    } else if (player2.throw === 4) {
+      $("#p2_1").hide();
+      $("#p2_2").hide();
+      $("#p2_3").hide();
+      $("#p2_4").show();
+      $("#p2_5").hide();
+      $("#p2_6").hide();
+    } else if (player2.throw === 5) {
+      $("#p2_1").hide();
+      $("#p2_2").hide();
+      $("#p2_3").hide();
+      $("#p2_4").hide();
+      $("#p2_5").show();
+      $("#p2_6").hide();
+    } else if (player2.throw === 6) {
+      $("#p2_1").hide();
+      $("#p2_2").hide();
+      $("#p2_3").hide();
+      $("#p2_4").hide();
+      $("#p2_5").hide();
+      $("#p2_6").show();
+    } else if (player2.throw === 1) {
+      $("#p2_1").show();
+      $("#p2_2").hide();
+      $("#p2_3").hide();
+      $("#p2_4").hide();
+      $("#p2_5").hide();
+      $("#p2_6").hide();
+    }
+    $("#player2Current").text(player2.score);
+    $("#button2").css("background-color", "#83db20");
+    $("#button1").css("background-color", "grey");
+  });
+});
